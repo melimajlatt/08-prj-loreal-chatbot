@@ -1,15 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chat Assistant</title>
+    <title>L'Oreal Beauty Advisor</title>
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -17,15 +17,19 @@
 
   <body>
     <div class="page-wrapper">
-      <!------- Header / Branding ------->
       <header class="site-header">
-        <h1 class="site-title">Smart Product Advisor</h1>
+        <img src="img/loreal-logo.png" alt="L'Oreal Paris" class="brand-logo" />
+        <p class="brand-kicker">Beauty Assistant</p>
+        <h1 class="site-title">Find your best routine</h1>
+        <p class="site-subtitle">
+          Ask about skincare, makeup, haircare, fragrance, and personalized
+          product recommendations.
+        </p>
       </header>
 
-      <!------- Chat Area ------->
       <main>
         <section class="chatbox">
-          <div id="chatWindow" class="chat-window">
+          <div id="chatWindow" class="chat-window" aria-live="polite">
             <!-- messages will be appended here via JS -->
           </div>
 
@@ -44,12 +48,15 @@
               <span class="visually-hidden">Send</span>
             </button>
           </form>
+
+          <p class="privacy-note">
+            This chatbot should only answer beauty and L'Oreal-related topics.
+          </p>
         </section>
       </main>
 
-      <!------- Footer Links ------->
       <footer class="site-footer">
-        <p>&copy; 2025 Company Name. All rights reserved.</p>
+        <p>&copy; 2026 L'Oreal-inspired classroom demo. All rights reserved.</p>
         <nav>
           <!-- These URLs are placeholders -->
           <a href="#">Privacy Policy</a>
