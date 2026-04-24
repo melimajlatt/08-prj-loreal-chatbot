@@ -14,21 +14,9 @@ export default {
       return new Response(null, { headers: corsHeaders });
     }
 
-    const userInput = await request.json();
-    const apiKey = env.OPENAI_API_KEY || userInput.apiKey;
-
-    if (!apiKey) {
-      return new Response(
-        JSON.stringify({
-          error: {
-            message: "Missing OPENAI_API_KEY secret or apiKey in request body.",
-          },
-        }),
-        { status: 400, headers: corsHeaders },
-      );
-    }
-
+    const apiKey = env.OPENAI_API_KEY; // Make sure to name your secret OPENAI_API_KEY in the Cloudflare Workers dashboard
     const apiUrl = "https://api.openai.com/v1/chat/completions";
+    const userInput = await request.json();
 
     const requestBody = {
       model: "gpt-4o",
